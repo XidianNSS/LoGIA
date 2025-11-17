@@ -1,0 +1,1 @@
+python main.py --model_name gpt2 --loss dlg --init random --max_iters 4000 --batch_size 1 --rank 8 --device cuda --dataset cola

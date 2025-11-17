@@ -1,0 +1,1 @@
+python main.py --map_to_real --enable_multi_swap --position_swap --embedding_norm --model_name gpt2 --init svd --max_iters 4000 --change_steps 1000 --swap_every 100 --batch_size 1 --rank 8 --device cuda --dataset cola --defense DP --sigma 1e-5

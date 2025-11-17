@@ -1,0 +1,1 @@
+python main.py --position_swap --embedding_norm --model_name gpt2 --init candidate_random --loss cos --max_iters 4000 --swap_every 100 --batch_size 1 --rank 8 --device cuda --dataset cola

@@ -1,0 +1,136 @@
+[INFO][2025-11-17 11:26:16,067.067] [main.py:77]: Namespace(model_name='gpt2', task_type='text-classification', dataset='cola', split='train', attk_part='AB', rank=8, alpha_multi=2, finetuned=True, loss='dlg', inputs=100, batch_size=1, distance_metric='cosine', tag_alpha=0.01, know_padding=True, init='random', embedding_norm=False, coeff_reg=0.1, norm_clamp=False, position_swap=False, swap_every=100, coeff_ppl=0.1, enable_multi_swap=False, change_steps=None, map_to_real=False, defense=None, thresholds=10, sigma=1e-05, spar_rate=0.3, quanti_method='float16', lr=0.05, max_iters=4000, snapshot_iters=100, print_iters=25, clip=1.0, seed=50, device='cuda', test=True)
+[INFO][2025-11-17 11:27:40,263.263] [main.py:77]: Namespace(model_name='gpt2', task_type='text-classification', dataset='cola', split='train', attk_part='AB', rank=8, alpha_multi=2, finetuned=True, loss='dlg', inputs=100, batch_size=1, distance_metric='cosine', tag_alpha=0.01, know_padding=True, init='random', embedding_norm=False, coeff_reg=0.1, norm_clamp=False, position_swap=False, swap_every=100, coeff_ppl=0.1, enable_multi_swap=False, change_steps=None, map_to_real=False, defense=None, thresholds=10, sigma=1e-05, spar_rate=0.3, quanti_method='float16', lr=0.05, max_iters=4000, snapshot_iters=100, print_iters=25, clip=1.0, seed=50, device='cuda', test=True)
+[INFO][2025-11-17 11:30:00,977.977] [main.py:77]: Namespace(model_name='gpt2', task_type='text-classification', dataset='cola', split='train', attk_part='AB', rank=8, alpha_multi=2, finetuned=True, loss='dlg', inputs=100, batch_size=1, distance_metric='cosine', tag_alpha=0.01, know_padding=True, init='random', embedding_norm=False, coeff_reg=0.1, norm_clamp=False, position_swap=False, swap_every=100, coeff_ppl=0.1, enable_multi_swap=False, change_steps=None, map_to_real=False, defense=None, thresholds=10, sigma=1e-05, spar_rate=0.3, quanti_method='float16', lr=0.05, max_iters=4000, snapshot_iters=100, print_iters=25, clip=1.0, seed=50, device='cuda', test=True)
+[INFO][2025-11-17 11:30:24,083.083] [train.py:68]: ---------gpt2 add Lora matrix successfully!-----------
+[INFO][2025-11-17 11:30:24,278.278] [train.py:74]: ---------gpt2 load parameters from ./lora_weight/gpt2_cola_r8.pt-----------
+[INFO][2025-11-17 11:30:24,281.281] [main.py:98]: 
+------------Start recovering id_1/100 data------------
+
+[INFO][2025-11-17 11:30:24,281.281] [main.py:99]: ========Ground Truth Data==========
+[INFO][2025-11-17 11:30:24,281.281] [main.py:101]: text_0: The money which I will make a proposal for us to squander amounts to $400,000.
+[INFO][2025-11-17 11:30:24,282.282] [main.py:102]: ===================================
+[INFO][2025-11-17 11:30:24,309.309] [main.py:103]: seq_length: [20]
+[INFO][2025-11-17 11:30:28,443.443] [main.py:121]: =============Initial Text:=============
+[INFO][2025-11-17 11:30:28,538.538] [main.py:125]: initial_text_0: epilepsy bait Aster toward tall socialism teleport proved fair belowEV unprecedentedordersATHER scrolls advancing connection arrivalfolk Obj
+[INFO][2025-11-17 11:30:28,538.538] [main.py:126]: ===================================
+[INFO][2025-11-17 11:30:31,758.758] [train.py:374]: | It:25 | Atk.loss: 2.48582 | Task.loss: 0.46071 | Norm: 27.81950 | Time 3.21887s |
+[INFO][2025-11-17 11:30:33,764.764] [train.py:374]: | It:50 | Atk.loss: 2.30187 | Task.loss: 0.50908 | Norm: 29.14385 | Time 5.22525s |
+[INFO][2025-11-17 11:30:35,679.679] [train.py:374]: | It:75 | Atk.loss: 1.93216 | Task.loss: 0.68750 | Norm: 30.44971 | Time 7.13969s |
+[INFO][2025-11-17 11:30:37,583.583] [train.py:374]: | It:100 | Atk.loss: 1.21601 | Task.loss: 0.79132 | Norm: 31.55862 | Time 9.04379s |
+[INFO][2025-11-17 11:30:37,686.686] [train.py:415]: ============100 recovered data================
+[INFO][2025-11-17 11:30:37,686.686] [train.py:417]: recovered_text_0:  fooled bedroomapes�712 piles bec theyazon 356Grand helicopters Raqqa legitim</ transportation/) dwindling è
+[INFO][2025-11-17 11:30:37,687.687] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:30:38,153.153] [train.py:422]: attack result:{'rouge1': np.float64(0.0), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0), 'rougeLsum': np.float64(0.0)}
+[INFO][2025-11-17 11:30:39,994.994] [train.py:374]: | It:125 | Atk.loss: 0.68740 | Task.loss: 0.69208 | Norm: 32.52041 | Time 11.45509s |
+[INFO][2025-11-17 11:30:41,832.832] [train.py:374]: | It:150 | Atk.loss: 0.47362 | Task.loss: 0.68764 | Norm: 32.77143 | Time 13.29363s |
+[INFO][2025-11-17 11:30:43,682.682] [train.py:374]: | It:175 | Atk.loss: 0.38442 | Task.loss: 0.66165 | Norm: 32.69620 | Time 15.14308s |
+[INFO][2025-11-17 11:30:45,833.833] [train.py:374]: | It:200 | Atk.loss: 0.30988 | Task.loss: 0.65670 | Norm: 32.51794 | Time 17.29413s |
+[INFO][2025-11-17 11:30:45,841.841] [train.py:415]: ============200 recovered data================
+[INFO][2025-11-17 11:30:45,841.841] [train.py:417]: recovered_text_0: ierre merelyapespkg aUSD%%%% they Freedom figures pros duplicateLib legitim ceiling Ridley66666666 valuation - suburb
+[INFO][2025-11-17 11:30:45,841.841] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:30:46,107.107] [train.py:422]: attack result:{'rouge1': np.float64(0.0), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0), 'rougeLsum': np.float64(0.0)}
+[INFO][2025-11-17 11:30:48,127.127] [train.py:374]: | It:225 | Atk.loss: 0.27000 | Task.loss: 0.65784 | Norm: 32.30265 | Time 19.58736s |
+[INFO][2025-11-17 11:30:50,108.108] [train.py:374]: | It:250 | Atk.loss: 0.26522 | Task.loss: 0.72302 | Norm: 32.07556 | Time 21.56917s |
+[INFO][2025-11-17 11:30:52,079.079] [train.py:374]: | It:275 | Atk.loss: 0.22004 | Task.loss: 0.67018 | Norm: 31.84716 | Time 23.53987s |
+[INFO][2025-11-17 11:30:54,014.014] [train.py:374]: | It:300 | Atk.loss: 0.20287 | Task.loss: 0.64499 | Norm: 31.59888 | Time 25.47428s |
+[INFO][2025-11-17 11:30:54,021.021] [train.py:415]: ============300 recovered data================
+[INFO][2025-11-17 11:30:54,021.021] [train.py:417]: recovered_text_0:  DRAG andthiaiosity a Our amount they Intel figures pros refundApart bringing ceiling Ridley66666666 valuation ( Whatever
+[INFO][2025-11-17 11:30:54,021.021] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:30:54,282.282] [train.py:422]: attack result:{'rouge1': np.float64(0.06451612903225808), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.06451612903225808), 'rougeLsum': np.float64(0.06451612903225808)}
+[INFO][2025-11-17 11:30:56,242.242] [train.py:374]: | It:325 | Atk.loss: 0.18905 | Task.loss: 0.65856 | Norm: 31.33892 | Time 27.70295s |
+[INFO][2025-11-17 11:30:58,201.201] [train.py:374]: | It:350 | Atk.loss: 0.17983 | Task.loss: 0.65583 | Norm: 31.10168 | Time 29.66248s |
+[INFO][2025-11-17 11:31:00,250.250] [train.py:374]: | It:375 | Atk.loss: 0.16982 | Task.loss: 0.68052 | Norm: 30.85920 | Time 31.71128s |
+[INFO][2025-11-17 11:31:02,162.162] [train.py:374]: | It:400 | Atk.loss: 0.16075 | Task.loss: 0.65264 | Norm: 30.63175 | Time 33.62262s |
+[INFO][2025-11-17 11:31:02,169.169] [train.py:415]: ============400 recovered data================
+[INFO][2025-11-17 11:31:02,169.169] [train.py:417]: recovered_text_0:  DRAG and IÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ an Our amount they Intel figures pros refundApart bringing enrol Ridley66666666 novelty ( Whatever
+[INFO][2025-11-17 11:31:02,169.169] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:02,429.429] [train.py:422]: attack result:{'rouge1': np.float64(0.0625), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0625), 'rougeLsum': np.float64(0.0625)}
+[INFO][2025-11-17 11:31:04,354.354] [train.py:374]: | It:425 | Atk.loss: 0.15119 | Task.loss: 0.65806 | Norm: 30.38939 | Time 35.81447s |
+[INFO][2025-11-17 11:31:06,320.320] [train.py:374]: | It:450 | Atk.loss: 0.15627 | Task.loss: 0.66829 | Norm: 30.22560 | Time 37.78125s |
+[INFO][2025-11-17 11:31:08,239.239] [train.py:374]: | It:475 | Atk.loss: 0.14629 | Task.loss: 0.67935 | Norm: 29.98532 | Time 39.70001s |
+[INFO][2025-11-17 11:31:10,171.171] [train.py:374]: | It:500 | Atk.loss: 0.13817 | Task.loss: 0.65253 | Norm: 29.79117 | Time 41.63185s |
+[INFO][2025-11-17 11:31:10,178.178] [train.py:415]: ============500 recovered data================
+[INFO][2025-11-17 11:31:10,179.179] [train.py:417]: recovered_text_0:  DRAG and IÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ an Our amount they Intel figures advisable refundApart bringing enrol Ridley66666666 novelty ( Had
+[INFO][2025-11-17 11:31:10,179.179] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:10,436.436] [train.py:422]: attack result:{'rouge1': np.float64(0.0625), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0625), 'rougeLsum': np.float64(0.0625)}
+[INFO][2025-11-17 11:31:12,355.355] [train.py:374]: | It:525 | Atk.loss: 0.13496 | Task.loss: 0.63227 | Norm: 29.55089 | Time 43.81481s |
+[INFO][2025-11-17 11:31:14,498.498] [train.py:374]: | It:550 | Atk.loss: 0.12832 | Task.loss: 0.67094 | Norm: 29.33285 | Time 45.95950s |
+[INFO][2025-11-17 11:31:16,632.632] [train.py:374]: | It:575 | Atk.loss: 0.12166 | Task.loss: 0.66351 | Norm: 29.09539 | Time 48.09308s |
+[INFO][2025-11-17 11:31:18,712.712] [train.py:374]: | It:600 | Atk.loss: 0.12025 | Task.loss: 0.66470 | Norm: 28.88705 | Time 50.17299s |
+[INFO][2025-11-17 11:31:18,719.719] [train.py:415]: ============600 recovered data================
+[INFO][2025-11-17 11:31:18,719.719] [train.py:417]: recovered_text_0:  DRAG will IoreAndOnline an Our amount they Aircraft figures advisable reconnectApart bringing enrolgets firsthand demonstration ( Had
+[INFO][2025-11-17 11:31:18,720.720] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:18,985.985] [train.py:422]: attack result:{'rouge1': np.float64(0.0625), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0625), 'rougeLsum': np.float64(0.0625)}
+[INFO][2025-11-17 11:31:21,028.028] [train.py:374]: | It:625 | Atk.loss: 0.11678 | Task.loss: 0.67930 | Norm: 28.69907 | Time 52.48973s |
+[INFO][2025-11-17 11:31:22,955.955] [train.py:374]: | It:650 | Atk.loss: 0.11077 | Task.loss: 0.65774 | Norm: 28.46008 | Time 54.41629s |
+[INFO][2025-11-17 11:31:24,878.878] [train.py:374]: | It:675 | Atk.loss: 0.11614 | Task.loss: 0.67834 | Norm: 28.28334 | Time 56.33933s |
+[INFO][2025-11-17 11:31:26,807.807] [train.py:374]: | It:700 | Atk.loss: 0.10880 | Task.loss: 0.63623 | Norm: 28.07234 | Time 58.26831s |
+[INFO][2025-11-17 11:31:26,815.815] [train.py:415]: ============700 recovered data================
+[INFO][2025-11-17 11:31:26,815.815] [train.py:417]: recovered_text_0:  DRAG will IoreAndOnline an Our amount they Aircraft figures advisable 499Apart bringing enrolgets firsthand demonstration ( Had
+[INFO][2025-11-17 11:31:26,815.815] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:27,074.074] [train.py:422]: attack result:{'rouge1': np.float64(0.0625), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0625), 'rougeLsum': np.float64(0.0625)}
+[INFO][2025-11-17 11:31:29,040.040] [train.py:374]: | It:725 | Atk.loss: 0.10866 | Task.loss: 0.65584 | Norm: 27.89708 | Time 60.50098s |
+[INFO][2025-11-17 11:31:31,064.064] [train.py:374]: | It:750 | Atk.loss: 0.10399 | Task.loss: 0.67223 | Norm: 27.68320 | Time 62.52497s |
+[INFO][2025-11-17 11:31:33,012.012] [train.py:374]: | It:775 | Atk.loss: 0.10712 | Task.loss: 0.65536 | Norm: 27.48444 | Time 64.47324s |
+[INFO][2025-11-17 11:31:34,926.926] [train.py:374]: | It:800 | Atk.loss: 0.10520 | Task.loss: 0.68173 | Norm: 27.30144 | Time 66.38769s |
+[INFO][2025-11-17 11:31:34,934.934] [train.py:415]: ============800 recovered data================
+[INFO][2025-11-17 11:31:34,934.934] [train.py:417]: recovered_text_0: ierre will IoreAndOnline an Our amount they Aircraft figures advisable 499Apart bringing enrolgets firsthand marvelous ( Had
+[INFO][2025-11-17 11:31:34,934.934] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:35,202.202] [train.py:422]: attack result:{'rouge1': np.float64(0.0625), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0625), 'rougeLsum': np.float64(0.0625)}
+[INFO][2025-11-17 11:31:37,209.209] [train.py:374]: | It:825 | Atk.loss: 0.09869 | Task.loss: 0.64601 | Norm: 27.10562 | Time 68.67004s |
+[INFO][2025-11-17 11:31:39,153.153] [train.py:374]: | It:850 | Atk.loss: 0.10221 | Task.loss: 0.67298 | Norm: 26.92159 | Time 70.61417s |
+[INFO][2025-11-17 11:31:41,130.130] [train.py:374]: | It:875 | Atk.loss: 0.09743 | Task.loss: 0.67888 | Norm: 26.76209 | Time 72.59138s |
+[INFO][2025-11-17 11:31:43,286.286] [train.py:374]: | It:900 | Atk.loss: 0.09049 | Task.loss: 0.66120 | Norm: 26.58092 | Time 74.74718s |
+[INFO][2025-11-17 11:31:43,293.293] [train.py:415]: ============900 recovered data================
+[INFO][2025-11-17 11:31:43,294.294] [train.py:417]: recovered_text_0: ierre will I Exactly an Our amount they Aircraft
+ advisable 499Eat bringing enrolgets lik marvelous ( Had
+[INFO][2025-11-17 11:31:43,294.294] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:43,558.558] [train.py:422]: attack result:{'rouge1': np.float64(0.125), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.0625), 'rougeLsum': np.float64(0.0625)}
+[INFO][2025-11-17 11:31:45,701.701] [train.py:374]: | It:925 | Atk.loss: 0.13969 | Task.loss: 0.60286 | Norm: 26.40862 | Time 77.16197s |
+[INFO][2025-11-17 11:31:47,704.704] [train.py:374]: | It:950 | Atk.loss: 0.09331 | Task.loss: 0.65133 | Norm: 26.40737 | Time 79.16481s |
+[INFO][2025-11-17 11:31:49,614.614] [train.py:374]: | It:975 | Atk.loss: 0.08921 | Task.loss: 0.66688 | Norm: 26.26774 | Time 81.07546s |
+[INFO][2025-11-17 11:31:51,484.484] [train.py:374]: | It:1000 | Atk.loss: 0.08474 | Task.loss: 0.65343 | Norm: 26.09254 | Time 82.94530s |
+[INFO][2025-11-17 11:31:51,492.492] [train.py:415]: ============1000 recovered data================
+[INFO][2025-11-17 11:31:51,492.492] [train.py:417]: recovered_text_0: ierre will I Exactly an Our amount they Aircraft
+ advisableSkipEat bringing enrolgets lik discourse. Had
+[INFO][2025-11-17 11:31:51,492.492] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:51,760.760] [train.py:422]: attack result:{'rouge1': np.float64(0.12903225806451615), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.06451612903225808), 'rougeLsum': np.float64(0.06451612903225808)}
+[INFO][2025-11-17 11:31:53,671.671] [train.py:374]: | It:1025 | Atk.loss: 0.08948 | Task.loss: 0.67127 | Norm: 25.92101 | Time 85.13271s |
+[INFO][2025-11-17 11:31:55,582.582] [train.py:374]: | It:1050 | Atk.loss: 0.08544 | Task.loss: 0.67202 | Norm: 25.77753 | Time 87.04294s |
+[INFO][2025-11-17 11:31:57,453.453] [train.py:374]: | It:1075 | Atk.loss: 0.08410 | Task.loss: 0.66762 | Norm: 25.62779 | Time 88.91476s |
+[INFO][2025-11-17 11:31:59,394.394] [train.py:374]: | It:1100 | Atk.loss: 0.08764 | Task.loss: 0.66986 | Norm: 25.48711 | Time 90.85558s |
+[INFO][2025-11-17 11:31:59,402.402] [train.py:415]: ============1100 recovered data================
+[INFO][2025-11-17 11:31:59,402.402] [train.py:417]: recovered_text_0: ierre will I Exactly an Our amount they Aircraft
+ advisableSkipEat bringing sizegets lik discourse. Had
+[INFO][2025-11-17 11:31:59,402.402] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:31:59,662.662] [train.py:422]: attack result:{'rouge1': np.float64(0.12903225806451615), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.06451612903225808), 'rougeLsum': np.float64(0.06451612903225808)}
+[INFO][2025-11-17 11:32:01,636.636] [train.py:374]: | It:1125 | Atk.loss: 0.08195 | Task.loss: 0.66553 | Norm: 25.34753 | Time 93.09728s |
+[INFO][2025-11-17 11:32:03,547.547] [train.py:374]: | It:1150 | Atk.loss: 0.08900 | Task.loss: 0.67601 | Norm: 25.20688 | Time 95.00818s |
+[INFO][2025-11-17 11:32:05,479.479] [train.py:374]: | It:1175 | Atk.loss: 0.08184 | Task.loss: 0.64173 | Norm: 25.06549 | Time 96.93993s |
+[INFO][2025-11-17 11:32:07,443.443] [train.py:374]: | It:1200 | Atk.loss: 0.08821 | Task.loss: 0.62927 | Norm: 24.92612 | Time 98.90291s |
+[INFO][2025-11-17 11:32:07,450.450] [train.py:415]: ============1200 recovered data================
+[INFO][2025-11-17 11:32:07,450.450] [train.py:417]: recovered_text_0: ierre will I unsure an Our amount they Aircraft
+ advisableSkipEat bringing sizegets lik NON. Had
+[INFO][2025-11-17 11:32:07,451.451] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:32:07,711.711] [train.py:422]: attack result:{'rouge1': np.float64(0.12903225806451615), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.06451612903225808), 'rougeLsum': np.float64(0.06451612903225808)}
+[INFO][2025-11-17 11:32:09,677.677] [train.py:374]: | It:1225 | Atk.loss: 0.07859 | Task.loss: 0.65948 | Norm: 24.79021 | Time 101.13844s |
+[INFO][2025-11-17 11:32:11,858.858] [train.py:374]: | It:1250 | Atk.loss: 0.07744 | Task.loss: 0.64972 | Norm: 24.67953 | Time 103.31898s |
+[INFO][2025-11-17 11:32:14,016.016] [train.py:374]: | It:1275 | Atk.loss: 0.09160 | Task.loss: 0.69028 | Norm: 24.54930 | Time 105.47770s |
+[INFO][2025-11-17 11:32:16,455.455] [train.py:374]: | It:1300 | Atk.loss: 0.07656 | Task.loss: 0.66688 | Norm: 24.47372 | Time 107.91655s |
+[INFO][2025-11-17 11:32:16,463.463] [train.py:415]: ============1300 recovered data================
+[INFO][2025-11-17 11:32:16,463.463] [train.py:417]: recovered_text_0: ierre will Ioooo an Our amount they whoever
+ advisable underestEat bringing sizegets lik NON. Had
+[INFO][2025-11-17 11:32:16,464.464] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:32:16,721.721] [train.py:422]: attack result:{'rouge1': np.float64(0.06451612903225808), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.06451612903225808), 'rougeLsum': np.float64(0.06451612903225808)}
+[INFO][2025-11-17 11:32:18,708.708] [train.py:374]: | It:1325 | Atk.loss: 0.07179 | Task.loss: 0.64557 | Norm: 24.33842 | Time 110.16956s |
+[INFO][2025-11-17 11:32:20,706.706] [train.py:374]: | It:1350 | Atk.loss: 0.07254 | Task.loss: 0.63873 | Norm: 24.19964 | Time 112.16723s |
+[INFO][2025-11-17 11:32:22,674.674] [train.py:374]: | It:1375 | Atk.loss: 0.06966 | Task.loss: 0.64864 | Norm: 24.07023 | Time 114.13570s |
+[INFO][2025-11-17 11:32:24,657.657] [train.py:374]: | It:1400 | Atk.loss: 0.07088 | Task.loss: 0.65607 | Norm: 23.96372 | Time 116.11789s |
+[INFO][2025-11-17 11:32:24,664.664] [train.py:415]: ============1400 recovered data================
+[INFO][2025-11-17 11:32:24,664.664] [train.py:417]: recovered_text_0: ayne will Ioooo an Our amount they whoever
+ advisable underestEat bringing sizeequality lik NON. Had
+[INFO][2025-11-17 11:32:24,665.665] [train.py:418]: ===========================================================
+[INFO][2025-11-17 11:32:24,929.929] [train.py:422]: attack result:{'rouge1': np.float64(0.06451612903225808), 'rouge2': np.float64(0.0), 'rougeL': np.float64(0.06451612903225808), 'rougeLsum': np.float64(0.06451612903225808)}
+[INFO][2025-11-17 11:32:26,896.896] [train.py:374]: | It:1425 | Atk.loss: 0.07059 | Task.loss: 0.65956 | Norm: 23.85229 | Time 118.35683s |
+[INFO][2025-11-17 11:32:28,899.899] [train.py:374]: | It:1450 | Atk.loss: 0.07295 | Task.loss: 0.66554 | Norm: 23.73954 | Time 120.35964s |
+[INFO][2025-11-17 11:32:30,876.876] [train.py:374]: | It:1475 | Atk.loss: 0.06709 | Task.loss: 0.65900 | Norm: 23.63743 | Time 122.33713s |
