@@ -35,7 +35,7 @@ def set_loginfo(args):
     now = datetime.now().strftime("%Y%m%d_%H%M%S")
     train_method = "full" if args.attk_part == "full" else f"{args.attk_part}_r{args.rank}"
     if args.change_steps is not None and args.init == "svd":
-        method = "semg"
+        method = "logia"
     elif args.position_swap and args.init == "candidate_random":
         method = "lamp"
     else:

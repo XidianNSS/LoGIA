@@ -1,21 +1,29 @@
-# SEMG
+# LoGIA
 
 ## 1. Installation & Running Steps
 
 ### **Step 1: Create Conda Environment**
 
 ```bash
-conda create -n semg python==3.12
+conda create -n LoGIA python==3.12
 ```
 
 ### **Step 2: Install Required Dependencies**
 
 ```bash
-conda activate semg
+conda activate LoGIA
 pip install -r requirements.txt
 ```
 
-### **Step 3: LoRA Matrix Fine-tuning**
+### **Step 3: Download mdoels and datasets**
+
+```bash
+python download.py
+```
+
+The models and datasets will be stored in **`cache/`** directory.
+
+### **Step 4: LoRA Matrix Fine-tuning**
 
 This step prevents the LoRA **A matrix** from having extremely small gradients.
 
@@ -28,12 +36,12 @@ python train_lora.py \
 
 The fine-tuned LoRA matrices will be saved in the **`lora_weight/`** directory.
 
-### **Step 4: Run the SEMG Attack Script**
+### **Step 5: Run the LoGIA Attack Script**
 
 Inside the *scripts* directory:
 
 ```bash
-bash scripts/semg_example.sh
+bash scripts/logia_example.sh
 ```
 
 ---
@@ -53,7 +61,7 @@ bash scripts/semg_example.sh
 | **position_swap**   | Whether to randomly permute token positions                 |
 | **change_steps**    | Interval for performing Embedding Discrete Mapping          |
 | **map_to_real**     | Whether to perform Embedding Discrete Mapping               |
-| **defense**         | Defense strategy used against SEMG                          |
+| **defense**         | Defense strategy used against LoGIA                          |
 | **lr**              | Learning rate                                               |
 | **max_iters**       | Maximum optimization iterations                             |
 
@@ -62,7 +70,7 @@ bash scripts/semg_example.sh
 ## 3. Directory and File Overview
 
 ```
-SEMG/
+LoGIA/
 │
 ├── cache/                # Cached model files and datasets
 ├── eval/                 # Evaluation utilities for attack metrics
@@ -71,7 +79,7 @@ SEMG/
 ├── scripts/              # Executable experiment scripts
 ├── utils/                # Dataset processing, dummy input initialization, token utilities
 │
-├── main.py               # Main entry point of SEMG
+├── main.py               # Main entry point of LoGIA
 ├── train.py              # Dummy gradient computation, loss calculation, optimization
 ├── train_lora.py         # LoRA fine-tuning script
 │
